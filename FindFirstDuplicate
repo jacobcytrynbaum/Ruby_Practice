@@ -1,0 +1,12 @@
+Finds the first instance of a duplicate in an array. If no duplicate, returns -1. Uses hash nicely
+
+def firstDuplicate(a)
+  map = Hash.new
+  a.each do |num|
+      if map.include?(num)
+        return num
+        end
+      map[num] = num
+   end
+return -1
+end
